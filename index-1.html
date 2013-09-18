@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="Quotes">
+<head>
+  <script src="http://code.angularjs.org/1.0.7/angular.js"></script>
+  <script src="http://code.angularjs.org/1.0.7/angular-resource.js"></script>
+  <script src="quotes-1.js"></script>	
+</head>	
+<body>
+<div ng-controller="QuotesCtrl">
+  <button class="btn" ng-click="getQuotes()"><i class="icon-search"></i>Get Quotes</button>
+  <button class="btn" ng-click="getQuote()"><i class="icon-search"></i>Get Quote by Id</button>
+  <button class="btn" ng-click="deleteQuote()"><i class="icon-search"></i>Delete Quote</button>
+  <button class="btn" ng-click="addQuote()"><i class="icon-search"></i>Add Quote</button>
+  <button class="btn" ng-click="updateQuote()"><i class="icon-search"></i>Update Quote</button>
+  <table class="table table-striped">
+    <tr ng-repeat="quote in quotesResult">
+      <td>{{quote.text}}</td>
+    </tr>
+  </table>
+  <pre>quotesResult={{quotesResult | json}}</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="Quotes">
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.min.js"></script>
+  <script src="quotes.js"></script>	
+</head>	
+<body>
+<div ng-controller="QuotesCtrl" class="container">
+  <h1>Quotes Manager</h1>
+  <hr />
+  <span ng-hide="inListQuotes">
+    <button class="btn btn-primary" ng-click="getQuotes()">Get Quotes</button>
+  </span>  
+  <span ng-hide="addingNewQuote">
+    <button class="btn btn-primary" ng-click="editQuote(null)">Add Quote</button>
+  </span>
+  <br /><br />
+  <div ng-view></div>
+</div>
+</body>
+</html>

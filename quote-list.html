@@ -1,0 +1,7 @@
+<a href="" ng-repeat="quote in quoteList" ng-click="editQuote(quote)">
+<blockquote>
+  <p>{{quote.text}}</p>
+  <small>{{quote.author}}</small>
+</blockquote>
+</a>
+<pre>quoteList={{quoteList | json}}</pre>

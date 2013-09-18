@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="Quotes">
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.min.js"></script>
+  <script src="quotes.js"></script>	
+</head>	
+<body>
+<div ng-controller="QuotesCtrl" class="container">
+  <h1>Quotes Manager</h1>
+  <hr />
+  <button class="btn" ng-click="getQuotes()"><i class="icon-search"></i>Get Quotes</button>
+  <button class="btn" ng-click="getQuote()"><i class="icon-search"></i>Get Quote by Id</button>
+  <button class="btn" ng-click="deleteQuote()"><i class="icon-search"></i>Delete Quote</button>
+  <button class="btn" ng-click="addQuote()"><i class="icon-search"></i>Add Quote</button>
+  <button class="btn" ng-click="updateQuote()"><i class="icon-search"></i>Update Quote</button>
+  <hr />  
+  <div ng-view></div>
+</div>
+</body>
+</html>

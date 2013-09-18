@@ -1,0 +1,18 @@
+<form>
+  <legend><span ng-show="addingNewQuote">Create</span><span ng-hide="addingNewQuote">Edit</span> Quote</legend>
+  <label>Author</label>
+  <input type="text" ng-model="form.author">   
+  <label>Body</label>
+  <textarea name="text" class="input-xxlarge" rows="6" value="" placeholder="" ng-model="form.text"></textarea> 
+	<label>Year</label>
+  <input type="text" ng-model="form.year">   
+  <input type="hidden" ng-model="form._id"/>
+  <p>
+    <button type="cancel" class="btn cancel" ng-click="cancelForm()">Cancel</button>
+    <button type="submit" class="btn btn-danger delete" ng-click="deleteQuote(form)" ng-hide="addingNewQuote">Delete</button>      
+    <button type="submit" class="btn btn-success" ng-click="updateQuote(form)">
+      <span ng-show="addingNewQuote">Create</span><span ng-hide="addingNewQuote">Update</span>
+    </button>  
+  </p>
+</form> 
+<pre>quoteData={{quoteData | json}}</pre>
